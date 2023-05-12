@@ -22,3 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::resource('/mahasiswa', MahasiswaController::class);
 Route::resource('/login', LoginController::class);
+Route::get('/login/specific/{nama}', [LoginController::class, 'show_spec']);
