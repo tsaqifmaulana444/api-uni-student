@@ -18,7 +18,7 @@ return [
     //     'passwords' => 'users',
     // ],
     'defaults' => [
-        'guard' => 'mahasiswas',
+        'guard' => 'login_mahasiswa',
     ],
 
 
@@ -44,9 +44,9 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-        'mahasiswa' => [
+        'login_mahasiswa' => [
             'driver' => 'session',
-            'provider' => 'mahasiswas',
+            'provider' => 'login_mahasiswas',
         ],
     ],
 
@@ -72,9 +72,9 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-        'mahasiswas' => [
+        'login_mahasiswas' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Mahasiswa::class,
+            'model' => App\Models\LoginMahasiswa::class,
         ],
 
 

@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
 use App\Helpers\ApiFormatter;
+use App\Models\LoginMahasiswa;
 use App\Http\Controllers\Controller;
 
 class LoginController extends Controller
@@ -12,7 +12,7 @@ class LoginController extends Controller
 
     public function index()
     {
-        $data = Mahasiswa::select('id', 'nama', 'email', 'password')->get();
+        $data = LoginMahasiswa::select('id', 'nama', 'email', 'password')->get();
 
         if ($data) {
             return ApiFormatter::createApi(200, 'Success', $data);
