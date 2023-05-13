@@ -13,13 +13,13 @@ return [
     |
     */
 
-    // 'defaults' => [
-    //     'guard' => 'web',
-    //     'passwords' => 'users',
-    // ],
     'defaults' => [
-        'guard' => 'login_mahasiswa',
+        'guard' => 'web',
+        'passwords' => 'users',
     ],
+    // 'defaults' => [
+    //     'guard' => 'login_mahasiswa',
+    // ],
 
 
     /*
